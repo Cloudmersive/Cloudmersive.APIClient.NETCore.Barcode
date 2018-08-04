@@ -1,20 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net45</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <AssemblyName>Cloudmersive.APIClient.NETCore.Barcode</AssemblyName>
     <PackageId>Cloudmersive.APIClient.NETCore.Barcode</PackageId>
     <OutputType>Library</OutputType>
-    <Authors>Swagger</Authors>
-    <Company>Swagger</Company>
-    <AssemblyTitle>Swagger Library</AssemblyTitle>
-    <Description>A library generated from a Swagger doc</Description>
+    <Authors>Cloudmersive</Authors>
+    <Company>Cloudmersive</Company>
+    <AssemblyTitle>Cloudmersive Barcode API Client</AssemblyTitle>
+    <Description>Barcode APIs let you generate barcode images, and recognize values from images of barcodes.</Description>
     <Copyright>No Copyright</Copyright>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <RootNamespace>Cloudmersive.APIClient.NETCore.Barcode</RootNamespace>
-    <Version>1.1.8</Version>
+    <Version>1.2.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
