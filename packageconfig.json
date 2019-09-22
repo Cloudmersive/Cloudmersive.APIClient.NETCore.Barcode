@@ -1,7 +1,7 @@
 ﻿{
 
   "packageName" : "Cloudmersive.APIClient.NETCore.Barcode",
-  "packageVersion": "1.2.4",
+  "packageVersion": "1.2.5",
   "netCoreProjectFile": "true",
   "packageGuid": "27f0dd77-ce09-47a3-9b60-a3ee7b308535"
 }  
