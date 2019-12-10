@@ -5,7 +5,7 @@ Barcode APIs let you generate barcode images, and recognize values from images o
 This C# SDK is for the [Cloudmersive Barcode API](https://www.cloudmersive.com/barcode-api):
 
 - API version: v1
-- SDK version: 1.2.5
+- SDK version: 1.2.6
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
