@@ -4,14 +4,16 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**BarcodeLookupEanLookup**](BarcodeLookupApi.md#barcodelookupeanlookup) | **POST** /barcode/lookup/ean | Lookup a barcode value and return product data
+[**BarcodeLookupEanLookup**](BarcodeLookupApi.md#barcodelookupeanlookup) | **POST** /barcode/lookup/ean | Lookup EAN barcode value, return product data
 
 
 <a name="barcodelookupeanlookup"></a>
 # **BarcodeLookupEanLookup**
 > BarcodeLookupResponse BarcodeLookupEanLookup (string value)
 
-Lookup a barcode value and return product data
+Lookup EAN barcode value, return product data
+
+Lookup an input EAN barcode and return key details about the product
 
 ### Example
 ```csharp
@@ -37,7 +39,7 @@ namespace Example
 
             try
             {
-                // Lookup a barcode value and return product data
+                // Lookup EAN barcode value, return product data
                 BarcodeLookupResponse result = apiInstance.BarcodeLookupEanLookup(value);
                 Debug.WriteLine(result);
             }

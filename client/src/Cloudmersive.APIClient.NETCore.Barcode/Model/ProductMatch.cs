@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Cloudmersive.APIClient.NETCore.Barcode.Client.SwaggerDateConverter;
 
 namespace Cloudmersive.APIClient.NETCore.Barcode.Model
@@ -28,17 +26,17 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Model
     /// Matching product for the input barcode
     /// </summary>
     [DataContract]
-    public partial class ProductMatch :  IEquatable<ProductMatch>, IValidatableObject
+    public partial class ProductMatch :  IEquatable<ProductMatch>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductMatch" /> class.
         /// </summary>
-        /// <param name="EAN">EAN code for the product.</param>
-        /// <param name="Title">Title of the product.</param>
-        public ProductMatch(string EAN = default(string), string Title = default(string))
+        /// <param name="eAN">EAN code for the product.</param>
+        /// <param name="title">Title of the product.</param>
+        public ProductMatch(string eAN = default(string), string title = default(string))
         {
-            this.EAN = EAN;
-            this.Title = Title;
+            this.EAN = eAN;
+            this.Title = title;
         }
         
         /// <summary>
@@ -73,7 +71,7 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -126,16 +124,6 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Model
                     hashCode = hashCode * 59 + this.Title.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

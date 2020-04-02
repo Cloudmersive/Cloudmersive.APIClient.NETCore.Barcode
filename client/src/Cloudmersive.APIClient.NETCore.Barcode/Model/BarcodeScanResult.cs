@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Cloudmersive.APIClient.NETCore.Barcode.Client.SwaggerDateConverter;
 
 namespace Cloudmersive.APIClient.NETCore.Barcode.Model
@@ -28,19 +26,19 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Model
     /// Result of the barcode scan
     /// </summary>
     [DataContract]
-    public partial class BarcodeScanResult :  IEquatable<BarcodeScanResult>, IValidatableObject
+    public partial class BarcodeScanResult :  IEquatable<BarcodeScanResult>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BarcodeScanResult" /> class.
         /// </summary>
-        /// <param name="Successful">True if the operation was successful, false otherwise.</param>
-        /// <param name="BarcodeType">The type of the barcode; possible values are AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB.</param>
-        /// <param name="RawText">The barcode text.</param>
-        public BarcodeScanResult(bool? Successful = default(bool?), string BarcodeType = default(string), string RawText = default(string))
+        /// <param name="successful">True if the operation was successful, false otherwise.</param>
+        /// <param name="barcodeType">The type of the barcode; possible values are AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB.</param>
+        /// <param name="rawText">The barcode text.</param>
+        public BarcodeScanResult(bool? successful = default(bool?), string barcodeType = default(string), string rawText = default(string))
         {
-            this.Successful = Successful;
-            this.BarcodeType = BarcodeType;
-            this.RawText = RawText;
+            this.Successful = successful;
+            this.BarcodeType = barcodeType;
+            this.RawText = rawText;
         }
         
         /// <summary>
@@ -83,7 +81,7 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -143,16 +141,6 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Model
                     hashCode = hashCode * 59 + this.RawText.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 

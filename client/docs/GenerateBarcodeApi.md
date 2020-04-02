@@ -4,16 +4,18 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GenerateBarcodeEAN13**](GenerateBarcodeApi.md#generatebarcodeean13) | **POST** /barcode/generate/ean-13 | Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
-[**GenerateBarcodeEAN8**](GenerateBarcodeApi.md#generatebarcodeean8) | **POST** /barcode/generate/ean-8 | Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode
-[**GenerateBarcodeQRCode**](GenerateBarcodeApi.md#generatebarcodeqrcode) | **POST** /barcode/generate/qrcode | Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information
-[**GenerateBarcodeUPCA**](GenerateBarcodeApi.md#generatebarcodeupca) | **POST** /barcode/generate/upc-a | Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode
-[**GenerateBarcodeUPCE**](GenerateBarcodeApi.md#generatebarcodeupce) | **POST** /barcode/generate/upc-e | Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode
+[**GenerateBarcodeEAN13**](GenerateBarcodeApi.md#generatebarcodeean13) | **POST** /barcode/generate/ean-13 | Generate a EAN-13 code barcode as PNG file
+[**GenerateBarcodeEAN8**](GenerateBarcodeApi.md#generatebarcodeean8) | **POST** /barcode/generate/ean-8 | Generate a EAN-8 code barcode as PNG file
+[**GenerateBarcodeQRCode**](GenerateBarcodeApi.md#generatebarcodeqrcode) | **POST** /barcode/generate/qrcode | Generate a QR code barcode as PNG file
+[**GenerateBarcodeUPCA**](GenerateBarcodeApi.md#generatebarcodeupca) | **POST** /barcode/generate/upc-a | Generate a UPC-A code barcode as PNG file
+[**GenerateBarcodeUPCE**](GenerateBarcodeApi.md#generatebarcodeupce) | **POST** /barcode/generate/upc-e | Generate a UPC-E code barcode as PNG file
 
 
 <a name="generatebarcodeean13"></a>
 # **GenerateBarcodeEAN13**
 > System.IO.Stream GenerateBarcodeEAN13 (string value)
+
+Generate a EAN-13 code barcode as PNG file
 
 Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
 
@@ -41,7 +43,7 @@ namespace Example
 
             try
             {
-                // Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
+                // Generate a EAN-13 code barcode as PNG file
                 System.IO.Stream result = apiInstance.GenerateBarcodeEAN13(value);
                 Debug.WriteLine(result);
             }
@@ -79,6 +81,8 @@ Name | Type | Description  | Notes
 # **GenerateBarcodeEAN8**
 > System.IO.Stream GenerateBarcodeEAN8 (string value)
 
+Generate a EAN-8 code barcode as PNG file
+
 Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode
 
 ### Example
@@ -105,7 +109,7 @@ namespace Example
 
             try
             {
-                // Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode
+                // Generate a EAN-8 code barcode as PNG file
                 System.IO.Stream result = apiInstance.GenerateBarcodeEAN8(value);
                 Debug.WriteLine(result);
             }
@@ -143,6 +147,8 @@ Name | Type | Description  | Notes
 # **GenerateBarcodeQRCode**
 > System.IO.Stream GenerateBarcodeQRCode (string value)
 
+Generate a QR code barcode as PNG file
+
 Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information
 
 ### Example
@@ -169,7 +175,7 @@ namespace Example
 
             try
             {
-                // Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information
+                // Generate a QR code barcode as PNG file
                 System.IO.Stream result = apiInstance.GenerateBarcodeQRCode(value);
                 Debug.WriteLine(result);
             }
@@ -207,6 +213,8 @@ Name | Type | Description  | Notes
 # **GenerateBarcodeUPCA**
 > System.IO.Stream GenerateBarcodeUPCA (string value)
 
+Generate a UPC-A code barcode as PNG file
+
 Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode
 
 ### Example
@@ -233,7 +241,7 @@ namespace Example
 
             try
             {
-                // Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode
+                // Generate a UPC-A code barcode as PNG file
                 System.IO.Stream result = apiInstance.GenerateBarcodeUPCA(value);
                 Debug.WriteLine(result);
             }
@@ -271,6 +279,8 @@ Name | Type | Description  | Notes
 # **GenerateBarcodeUPCE**
 > System.IO.Stream GenerateBarcodeUPCE (string value)
 
+Generate a UPC-E code barcode as PNG file
+
 Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode
 
 ### Example
@@ -297,7 +307,7 @@ namespace Example
 
             try
             {
-                // Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode
+                // Generate a UPC-E code barcode as PNG file
                 System.IO.Stream result = apiInstance.GenerateBarcodeUPCE(value);
                 Debug.WriteLine(result);
             }

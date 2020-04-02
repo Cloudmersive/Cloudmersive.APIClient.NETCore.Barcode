@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp;
+using RestSharp.Portable;
 using Cloudmersive.APIClient.NETCore.Barcode.Client;
 using Cloudmersive.APIClient.NETCore.Barcode.Model;
 
@@ -25,10 +25,10 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Scan an image for a barcode and turn the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
+        /// Scan an image for a barcode
         /// </summary>
         /// <remarks>
-        /// 
+        /// Scan an image for a barcode and return the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -36,10 +36,10 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         BarcodeScanResult BarcodeScanImage (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Scan an image for a barcode and turn the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
+        /// Scan an image for a barcode
         /// </summary>
         /// <remarks>
-        /// 
+        /// Scan an image for a barcode and return the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -48,10 +48,10 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Scan an image for a barcode and turn the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
+        /// Scan an image for a barcode
         /// </summary>
         /// <remarks>
-        /// 
+        /// Scan an image for a barcode and return the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -59,10 +59,10 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         System.Threading.Tasks.Task<BarcodeScanResult> BarcodeScanImageAsync (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Scan an image for a barcode and turn the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
+        /// Scan an image for a barcode
         /// </summary>
         /// <remarks>
-        /// 
+        /// Scan an image for a barcode and return the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -84,7 +84,7 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// <returns></returns>
         public BarcodeScanApi(String basePath)
         {
-            this.Configuration = new Configuration { BasePath = basePath };
+            this.Configuration = new Cloudmersive.APIClient.NETCore.Barcode.Client.Configuration { BasePath = basePath };
 
             ExceptionFactory = Cloudmersive.APIClient.NETCore.Barcode.Client.Configuration.DefaultExceptionFactory;
         }
@@ -95,10 +95,10 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public BarcodeScanApi(Configuration configuration = null)
+        public BarcodeScanApi(Cloudmersive.APIClient.NETCore.Barcode.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default;
+                this.Configuration = Cloudmersive.APIClient.NETCore.Barcode.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
@@ -128,7 +128,7 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Configuration Configuration {get; set;}
+        public Cloudmersive.APIClient.NETCore.Barcode.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
@@ -169,7 +169,7 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         }
 
         /// <summary>
-        /// Scan an image for a barcode and turn the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB 
+        /// Scan an image for a barcode Scan an image for a barcode and return the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -181,7 +181,7 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         }
 
         /// <summary>
-        /// Scan an image for a barcode and turn the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB 
+        /// Scan an image for a barcode Scan an image for a barcode and return the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -192,10 +192,10 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             if (imageFile == null)
                 throw new ApiException(400, "Missing required parameter 'imageFile' when calling BarcodeScanApi->BarcodeScanImage");
 
-            var localVarPath = "/barcode/scan/image";
+            var localVarPath = "./barcode/scan/image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -204,7 +204,7 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             String[] localVarHttpContentTypes = new String[] {
                 "multipart/form-data"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -213,20 +213,20 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (imageFile != null) localVarFileParams.Add("imageFile", Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -239,12 +239,12 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             }
 
             return new ApiResponse<BarcodeScanResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (BarcodeScanResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BarcodeScanResult)));
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (BarcodeScanResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BarcodeScanResult)));
         }
 
         /// <summary>
-        /// Scan an image for a barcode and turn the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB 
+        /// Scan an image for a barcode Scan an image for a barcode and return the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -257,7 +257,7 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         }
 
         /// <summary>
-        /// Scan an image for a barcode and turn the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB 
+        /// Scan an image for a barcode Scan an image for a barcode and return the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -268,10 +268,10 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             if (imageFile == null)
                 throw new ApiException(400, "Missing required parameter 'imageFile' when calling BarcodeScanApi->BarcodeScanImage");
 
-            var localVarPath = "/barcode/scan/image";
+            var localVarPath = "./barcode/scan/image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -280,7 +280,7 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             String[] localVarHttpContentTypes = new String[] {
                 "multipart/form-data"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -289,20 +289,20 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (imageFile != null) localVarFileParams.Add("imageFile", Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -315,8 +315,8 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             }
 
             return new ApiResponse<BarcodeScanResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (BarcodeScanResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BarcodeScanResult)));
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (BarcodeScanResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BarcodeScanResult)));
         }
 
     }

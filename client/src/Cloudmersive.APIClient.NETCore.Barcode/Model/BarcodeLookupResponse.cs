@@ -12,14 +12,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Cloudmersive.APIClient.NETCore.Barcode.Client.SwaggerDateConverter;
 
 namespace Cloudmersive.APIClient.NETCore.Barcode.Model
@@ -28,17 +26,17 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Model
     /// Result of performing a barcode lookup
     /// </summary>
     [DataContract]
-    public partial class BarcodeLookupResponse :  IEquatable<BarcodeLookupResponse>, IValidatableObject
+    public partial class BarcodeLookupResponse :  IEquatable<BarcodeLookupResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BarcodeLookupResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if operation was successful, false otherwise.</param>
-        /// <param name="Matches">Resulting product matches for the input barcode.</param>
-        public BarcodeLookupResponse(bool? Successful = default(bool?), List<ProductMatch> Matches = default(List<ProductMatch>))
+        /// <param name="successful">True if operation was successful, false otherwise.</param>
+        /// <param name="matches">Resulting product matches for the input barcode.</param>
+        public BarcodeLookupResponse(bool? successful = default(bool?), List<ProductMatch> matches = default(List<ProductMatch>))
         {
-            this.Successful = Successful;
-            this.Matches = Matches;
+            this.Successful = successful;
+            this.Matches = matches;
         }
         
         /// <summary>
@@ -73,7 +71,7 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -126,16 +124,6 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Model
                     hashCode = hashCode * 59 + this.Matches.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 
