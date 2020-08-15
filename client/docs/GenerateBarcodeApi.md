@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="generatebarcodeean13"></a>
 # **GenerateBarcodeEAN13**
-> System.IO.Stream GenerateBarcodeEAN13 (string value)
+> byte[] GenerateBarcodeEAN13 (string value)
 
 Generate a EAN-13 code barcode as PNG file
 
@@ -44,7 +44,7 @@ namespace Example
             try
             {
                 // Generate a EAN-13 code barcode as PNG file
-                System.IO.Stream result = apiInstance.GenerateBarcodeEAN13(value);
+                byte[] result = apiInstance.GenerateBarcodeEAN13(value);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+**byte[]**
 
 ### Authorization
 
@@ -73,13 +73,13 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: image/png
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="generatebarcodeean8"></a>
 # **GenerateBarcodeEAN8**
-> System.IO.Stream GenerateBarcodeEAN8 (string value)
+> byte[] GenerateBarcodeEAN8 (string value)
 
 Generate a EAN-8 code barcode as PNG file
 
@@ -110,7 +110,7 @@ namespace Example
             try
             {
                 // Generate a EAN-8 code barcode as PNG file
-                System.IO.Stream result = apiInstance.GenerateBarcodeEAN8(value);
+                byte[] result = apiInstance.GenerateBarcodeEAN8(value);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+**byte[]**
 
 ### Authorization
 
@@ -139,13 +139,13 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: image/png
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="generatebarcodeqrcode"></a>
 # **GenerateBarcodeQRCode**
-> System.IO.Stream GenerateBarcodeQRCode (string value)
+> byte[] GenerateBarcodeQRCode (string value)
 
 Generate a QR code barcode as PNG file
 
@@ -176,7 +176,7 @@ namespace Example
             try
             {
                 // Generate a QR code barcode as PNG file
-                System.IO.Stream result = apiInstance.GenerateBarcodeQRCode(value);
+                byte[] result = apiInstance.GenerateBarcodeQRCode(value);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+**byte[]**
 
 ### Authorization
 
@@ -205,13 +205,13 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: image/png
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="generatebarcodeupca"></a>
 # **GenerateBarcodeUPCA**
-> System.IO.Stream GenerateBarcodeUPCA (string value)
+> byte[] GenerateBarcodeUPCA (string value)
 
 Generate a UPC-A code barcode as PNG file
 
@@ -242,7 +242,7 @@ namespace Example
             try
             {
                 // Generate a UPC-A code barcode as PNG file
-                System.IO.Stream result = apiInstance.GenerateBarcodeUPCA(value);
+                byte[] result = apiInstance.GenerateBarcodeUPCA(value);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+**byte[]**
 
 ### Authorization
 
@@ -271,13 +271,13 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: image/png
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="generatebarcodeupce"></a>
 # **GenerateBarcodeUPCE**
-> System.IO.Stream GenerateBarcodeUPCE (string value)
+> byte[] GenerateBarcodeUPCE (string value)
 
 Generate a UPC-E code barcode as PNG file
 
@@ -308,7 +308,7 @@ namespace Example
             try
             {
                 // Generate a UPC-E code barcode as PNG file
-                System.IO.Stream result = apiInstance.GenerateBarcodeUPCE(value);
+                byte[] result = apiInstance.GenerateBarcodeUPCE(value);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+**byte[]**
 
 ### Authorization
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: image/png
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
