@@ -22,7 +22,7 @@
     <PackageReference Include="FubarCoder.RestSharp.Portable.HttpClient" Version="4.0.7" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="JsonSubTypes" Version="1.2.0" />
-  </ItemGroup>
+  </ItemGroup><Target Name="PostBuild" AfterTargets="PostBuildEvent">    <Exec Command="call powershell C:\CodeSigning\sign.ps1  $(TargetPath)" />  </Target>
 
 
 </Project>
