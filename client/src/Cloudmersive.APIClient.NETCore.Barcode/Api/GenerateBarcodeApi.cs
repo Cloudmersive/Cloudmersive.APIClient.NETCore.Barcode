@@ -31,8 +31,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] GenerateBarcodeEAN13 (string value);
+        byte[] GenerateBarcodeCode128 (string value, int? width = null, int? height = null, bool? includeLabel = null);
 
         /// <summary>
         /// Generate a EAN-13 code barcode as PNG file
@@ -42,8 +45,38 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> GenerateBarcodeEAN13WithHttpInfo (string value);
+        ApiResponse<byte[]> GenerateBarcodeCode128WithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null);
+        /// <summary>
+        /// Generate a EAN-13 code barcode as PNG file
+        /// </summary>
+        /// <remarks>
+        /// Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] GenerateBarcodeEAN13 (string value, int? width = null, int? height = null, bool? includeLabel = null);
+
+        /// <summary>
+        /// Generate a EAN-13 code barcode as PNG file
+        /// </summary>
+        /// <remarks>
+        /// Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> GenerateBarcodeEAN13WithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null);
         /// <summary>
         /// Generate a EAN-8 code barcode as PNG file
         /// </summary>
@@ -52,8 +85,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] GenerateBarcodeEAN8 (string value);
+        byte[] GenerateBarcodeEAN8 (string value, int? width = null, int? height = null, bool? includeLabel = null);
 
         /// <summary>
         /// Generate a EAN-8 code barcode as PNG file
@@ -63,8 +99,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> GenerateBarcodeEAN8WithHttpInfo (string value);
+        ApiResponse<byte[]> GenerateBarcodeEAN8WithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null);
         /// <summary>
         /// Generate a QR code barcode as PNG file
         /// </summary>
@@ -73,8 +112,10 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">QR code text to convert into the QR code barcode</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] GenerateBarcodeQRCode (string value);
+        byte[] GenerateBarcodeQRCode (string value, int? width = null, int? height = null);
 
         /// <summary>
         /// Generate a QR code barcode as PNG file
@@ -84,8 +125,10 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">QR code text to convert into the QR code barcode</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> GenerateBarcodeQRCodeWithHttpInfo (string value);
+        ApiResponse<byte[]> GenerateBarcodeQRCodeWithHttpInfo (string value, int? width = null, int? height = null);
         /// <summary>
         /// Generate a UPC-A code barcode as PNG file
         /// </summary>
@@ -94,8 +137,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-A barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] GenerateBarcodeUPCA (string value);
+        byte[] GenerateBarcodeUPCA (string value, int? width = null, int? height = null, bool? includeLabel = null);
 
         /// <summary>
         /// Generate a UPC-A code barcode as PNG file
@@ -105,8 +151,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-A barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> GenerateBarcodeUPCAWithHttpInfo (string value);
+        ApiResponse<byte[]> GenerateBarcodeUPCAWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null);
         /// <summary>
         /// Generate a UPC-E code barcode as PNG file
         /// </summary>
@@ -115,8 +164,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-E barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] GenerateBarcodeUPCE (string value);
+        byte[] GenerateBarcodeUPCE (string value, int? width = null, int? height = null, bool? includeLabel = null);
 
         /// <summary>
         /// Generate a UPC-E code barcode as PNG file
@@ -126,8 +178,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-E barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> GenerateBarcodeUPCEWithHttpInfo (string value);
+        ApiResponse<byte[]> GenerateBarcodeUPCEWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -138,8 +193,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> GenerateBarcodeEAN13Async (string value);
+        System.Threading.Tasks.Task<byte[]> GenerateBarcodeCode128Async (string value, int? width = null, int? height = null, bool? includeLabel = null);
 
         /// <summary>
         /// Generate a EAN-13 code barcode as PNG file
@@ -149,8 +207,38 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeEAN13AsyncWithHttpInfo (string value);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeCode128AsyncWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null);
+        /// <summary>
+        /// Generate a EAN-13 code barcode as PNG file
+        /// </summary>
+        /// <remarks>
+        /// Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> GenerateBarcodeEAN13Async (string value, int? width = null, int? height = null, bool? includeLabel = null);
+
+        /// <summary>
+        /// Generate a EAN-13 code barcode as PNG file
+        /// </summary>
+        /// <remarks>
+        /// Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeEAN13AsyncWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null);
         /// <summary>
         /// Generate a EAN-8 code barcode as PNG file
         /// </summary>
@@ -159,8 +247,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> GenerateBarcodeEAN8Async (string value);
+        System.Threading.Tasks.Task<byte[]> GenerateBarcodeEAN8Async (string value, int? width = null, int? height = null, bool? includeLabel = null);
 
         /// <summary>
         /// Generate a EAN-8 code barcode as PNG file
@@ -170,8 +261,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeEAN8AsyncWithHttpInfo (string value);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeEAN8AsyncWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null);
         /// <summary>
         /// Generate a QR code barcode as PNG file
         /// </summary>
@@ -180,8 +274,10 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">QR code text to convert into the QR code barcode</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> GenerateBarcodeQRCodeAsync (string value);
+        System.Threading.Tasks.Task<byte[]> GenerateBarcodeQRCodeAsync (string value, int? width = null, int? height = null);
 
         /// <summary>
         /// Generate a QR code barcode as PNG file
@@ -191,8 +287,10 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">QR code text to convert into the QR code barcode</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeQRCodeAsyncWithHttpInfo (string value);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeQRCodeAsyncWithHttpInfo (string value, int? width = null, int? height = null);
         /// <summary>
         /// Generate a UPC-A code barcode as PNG file
         /// </summary>
@@ -201,8 +299,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-A barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> GenerateBarcodeUPCAAsync (string value);
+        System.Threading.Tasks.Task<byte[]> GenerateBarcodeUPCAAsync (string value, int? width = null, int? height = null, bool? includeLabel = null);
 
         /// <summary>
         /// Generate a UPC-A code barcode as PNG file
@@ -212,8 +313,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-A barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeUPCAAsyncWithHttpInfo (string value);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeUPCAAsyncWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null);
         /// <summary>
         /// Generate a UPC-E code barcode as PNG file
         /// </summary>
@@ -222,8 +326,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-E barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> GenerateBarcodeUPCEAsync (string value);
+        System.Threading.Tasks.Task<byte[]> GenerateBarcodeUPCEAsync (string value, int? width = null, int? height = null, bool? includeLabel = null);
 
         /// <summary>
         /// Generate a UPC-E code barcode as PNG file
@@ -233,8 +340,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-E barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeUPCEAsyncWithHttpInfo (string value);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeUPCEAsyncWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null);
         #endregion Asynchronous Operations
     }
 
@@ -340,10 +450,13 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] GenerateBarcodeEAN13 (string value)
+        public byte[] GenerateBarcodeCode128 (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
-             ApiResponse<byte[]> localVarResponse = GenerateBarcodeEAN13WithHttpInfo(value);
+             ApiResponse<byte[]> localVarResponse = GenerateBarcodeCode128WithHttpInfo(value, width, height, includeLabel);
              return localVarResponse.Data;
         }
 
@@ -352,8 +465,196 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > GenerateBarcodeEAN13WithHttpInfo (string value)
+        public ApiResponse< byte[] > GenerateBarcodeCode128WithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling GenerateBarcodeApi->GenerateBarcodeCode128");
+
+            var localVarPath = "./barcode/generate/code-128";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (includeLabel != null) localVarHeaderParams.Add("includeLabel", this.Configuration.ApiClient.ParameterToString(includeLabel)); // header parameter
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GenerateBarcodeCode128", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Generate a EAN-13 code barcode as PNG file Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> GenerateBarcodeCode128Async (string value, int? width = null, int? height = null, bool? includeLabel = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await GenerateBarcodeCode128AsyncWithHttpInfo(value, width, height, includeLabel);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Generate a EAN-13 code barcode as PNG file Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeCode128AsyncWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling GenerateBarcodeApi->GenerateBarcodeCode128");
+
+            var localVarPath = "./barcode/generate/code-128";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (includeLabel != null) localVarHeaderParams.Add("includeLabel", this.Configuration.ApiClient.ParameterToString(includeLabel)); // header parameter
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GenerateBarcodeCode128", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Generate a EAN-13 code barcode as PNG file Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] GenerateBarcodeEAN13 (string value, int? width = null, int? height = null, bool? includeLabel = null)
+        {
+             ApiResponse<byte[]> localVarResponse = GenerateBarcodeEAN13WithHttpInfo(value, width, height, includeLabel);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Generate a EAN-13 code barcode as PNG file Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > GenerateBarcodeEAN13WithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
             // verify the required parameter 'value' is set
             if (value == null)
@@ -385,6 +686,9 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (includeLabel != null) localVarHeaderParams.Add("includeLabel", this.Configuration.ApiClient.ParameterToString(includeLabel)); // header parameter
             if (value != null && value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
@@ -423,10 +727,13 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> GenerateBarcodeEAN13Async (string value)
+        public async System.Threading.Tasks.Task<byte[]> GenerateBarcodeEAN13Async (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
-             ApiResponse<byte[]> localVarResponse = await GenerateBarcodeEAN13AsyncWithHttpInfo(value);
+             ApiResponse<byte[]> localVarResponse = await GenerateBarcodeEAN13AsyncWithHttpInfo(value, width, height, includeLabel);
              return localVarResponse.Data;
 
         }
@@ -436,8 +743,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeEAN13AsyncWithHttpInfo (string value)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeEAN13AsyncWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
             // verify the required parameter 'value' is set
             if (value == null)
@@ -469,6 +779,9 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (includeLabel != null) localVarHeaderParams.Add("includeLabel", this.Configuration.ApiClient.ParameterToString(includeLabel)); // header parameter
             if (value != null && value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
@@ -507,10 +820,13 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] GenerateBarcodeEAN8 (string value)
+        public byte[] GenerateBarcodeEAN8 (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
-             ApiResponse<byte[]> localVarResponse = GenerateBarcodeEAN8WithHttpInfo(value);
+             ApiResponse<byte[]> localVarResponse = GenerateBarcodeEAN8WithHttpInfo(value, width, height, includeLabel);
              return localVarResponse.Data;
         }
 
@@ -519,8 +835,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > GenerateBarcodeEAN8WithHttpInfo (string value)
+        public ApiResponse< byte[] > GenerateBarcodeEAN8WithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
             // verify the required parameter 'value' is set
             if (value == null)
@@ -552,6 +871,9 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (includeLabel != null) localVarHeaderParams.Add("includeLabel", this.Configuration.ApiClient.ParameterToString(includeLabel)); // header parameter
             if (value != null && value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
@@ -590,10 +912,13 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> GenerateBarcodeEAN8Async (string value)
+        public async System.Threading.Tasks.Task<byte[]> GenerateBarcodeEAN8Async (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
-             ApiResponse<byte[]> localVarResponse = await GenerateBarcodeEAN8AsyncWithHttpInfo(value);
+             ApiResponse<byte[]> localVarResponse = await GenerateBarcodeEAN8AsyncWithHttpInfo(value, width, height, includeLabel);
              return localVarResponse.Data;
 
         }
@@ -603,8 +928,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeEAN8AsyncWithHttpInfo (string value)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeEAN8AsyncWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
             // verify the required parameter 'value' is set
             if (value == null)
@@ -636,6 +964,9 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (includeLabel != null) localVarHeaderParams.Add("includeLabel", this.Configuration.ApiClient.ParameterToString(includeLabel)); // header parameter
             if (value != null && value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
@@ -674,10 +1005,12 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">QR code text to convert into the QR code barcode</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] GenerateBarcodeQRCode (string value)
+        public byte[] GenerateBarcodeQRCode (string value, int? width = null, int? height = null)
         {
-             ApiResponse<byte[]> localVarResponse = GenerateBarcodeQRCodeWithHttpInfo(value);
+             ApiResponse<byte[]> localVarResponse = GenerateBarcodeQRCodeWithHttpInfo(value, width, height);
              return localVarResponse.Data;
         }
 
@@ -686,8 +1019,10 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">QR code text to convert into the QR code barcode</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > GenerateBarcodeQRCodeWithHttpInfo (string value)
+        public ApiResponse< byte[] > GenerateBarcodeQRCodeWithHttpInfo (string value, int? width = null, int? height = null)
         {
             // verify the required parameter 'value' is set
             if (value == null)
@@ -719,6 +1054,8 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
             if (value != null && value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
@@ -757,10 +1094,12 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">QR code text to convert into the QR code barcode</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> GenerateBarcodeQRCodeAsync (string value)
+        public async System.Threading.Tasks.Task<byte[]> GenerateBarcodeQRCodeAsync (string value, int? width = null, int? height = null)
         {
-             ApiResponse<byte[]> localVarResponse = await GenerateBarcodeQRCodeAsyncWithHttpInfo(value);
+             ApiResponse<byte[]> localVarResponse = await GenerateBarcodeQRCodeAsyncWithHttpInfo(value, width, height);
              return localVarResponse.Data;
 
         }
@@ -770,8 +1109,10 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">QR code text to convert into the QR code barcode</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeQRCodeAsyncWithHttpInfo (string value)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeQRCodeAsyncWithHttpInfo (string value, int? width = null, int? height = null)
         {
             // verify the required parameter 'value' is set
             if (value == null)
@@ -803,6 +1144,8 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
             if (value != null && value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
@@ -841,10 +1184,13 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-A barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] GenerateBarcodeUPCA (string value)
+        public byte[] GenerateBarcodeUPCA (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
-             ApiResponse<byte[]> localVarResponse = GenerateBarcodeUPCAWithHttpInfo(value);
+             ApiResponse<byte[]> localVarResponse = GenerateBarcodeUPCAWithHttpInfo(value, width, height, includeLabel);
              return localVarResponse.Data;
         }
 
@@ -853,8 +1199,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-A barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > GenerateBarcodeUPCAWithHttpInfo (string value)
+        public ApiResponse< byte[] > GenerateBarcodeUPCAWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
             // verify the required parameter 'value' is set
             if (value == null)
@@ -886,6 +1235,9 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (includeLabel != null) localVarHeaderParams.Add("includeLabel", this.Configuration.ApiClient.ParameterToString(includeLabel)); // header parameter
             if (value != null && value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
@@ -924,10 +1276,13 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-A barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> GenerateBarcodeUPCAAsync (string value)
+        public async System.Threading.Tasks.Task<byte[]> GenerateBarcodeUPCAAsync (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
-             ApiResponse<byte[]> localVarResponse = await GenerateBarcodeUPCAAsyncWithHttpInfo(value);
+             ApiResponse<byte[]> localVarResponse = await GenerateBarcodeUPCAAsyncWithHttpInfo(value, width, height, includeLabel);
              return localVarResponse.Data;
 
         }
@@ -937,8 +1292,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-A barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeUPCAAsyncWithHttpInfo (string value)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeUPCAAsyncWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
             // verify the required parameter 'value' is set
             if (value == null)
@@ -970,6 +1328,9 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (includeLabel != null) localVarHeaderParams.Add("includeLabel", this.Configuration.ApiClient.ParameterToString(includeLabel)); // header parameter
             if (value != null && value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
@@ -1008,10 +1369,13 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-E barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] GenerateBarcodeUPCE (string value)
+        public byte[] GenerateBarcodeUPCE (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
-             ApiResponse<byte[]> localVarResponse = GenerateBarcodeUPCEWithHttpInfo(value);
+             ApiResponse<byte[]> localVarResponse = GenerateBarcodeUPCEWithHttpInfo(value, width, height, includeLabel);
              return localVarResponse.Data;
         }
 
@@ -1020,8 +1384,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-E barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > GenerateBarcodeUPCEWithHttpInfo (string value)
+        public ApiResponse< byte[] > GenerateBarcodeUPCEWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
             // verify the required parameter 'value' is set
             if (value == null)
@@ -1053,6 +1420,9 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (includeLabel != null) localVarHeaderParams.Add("includeLabel", this.Configuration.ApiClient.ParameterToString(includeLabel)); // header parameter
             if (value != null && value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
@@ -1091,10 +1461,13 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-E barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> GenerateBarcodeUPCEAsync (string value)
+        public async System.Threading.Tasks.Task<byte[]> GenerateBarcodeUPCEAsync (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
-             ApiResponse<byte[]> localVarResponse = await GenerateBarcodeUPCEAsyncWithHttpInfo(value);
+             ApiResponse<byte[]> localVarResponse = await GenerateBarcodeUPCEAsyncWithHttpInfo(value, width, height, includeLabel);
              return localVarResponse.Data;
 
         }
@@ -1104,8 +1477,11 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">UPC-E barcode value to generate from</param>
+        /// <param name="width">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="height">Optional: width of the barcode in pixels.  Minimum value of 10. (optional)</param>
+        /// <param name="includeLabel">Optional: show text label on the image of the barcode value, default is true. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeUPCEAsyncWithHttpInfo (string value)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> GenerateBarcodeUPCEAsyncWithHttpInfo (string value, int? width = null, int? height = null, bool? includeLabel = null)
         {
             // verify the required parameter 'value' is set
             if (value == null)
@@ -1137,6 +1513,9 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (includeLabel != null) localVarHeaderParams.Add("includeLabel", this.Configuration.ApiClient.ParameterToString(includeLabel)); // header parameter
             if (value != null && value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter

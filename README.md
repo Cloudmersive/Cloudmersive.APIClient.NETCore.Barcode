@@ -5,7 +5,7 @@ Barcode APIs let you generate barcode images, and recognize values from images o
 This C# SDK is for the [Cloudmersive Barcode API](https://www.cloudmersive.com/barcode-api):
 
 - API version: v1
-- SDK version: 2.1.0
+- SDK version: 2.2.0
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -81,7 +81,9 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *BarcodeLookupApi* | [**BarcodeLookupEanLookup**](docs/BarcodeLookupApi.md#barcodelookupeanlookup) | **POST** /barcode/lookup/ean | Lookup EAN barcode value, return product data
 *BarcodeScanApi* | [**BarcodeScanImage**](docs/BarcodeScanApi.md#barcodescanimage) | **POST** /barcode/scan/image | Scan and recognize an image of a barcode
+*BarcodeScanApi* | [**BarcodeScanImageAdvanced**](docs/BarcodeScanApi.md#barcodescanimageadvanced) | **POST** /barcode/scan/image/advanced | Advanced AI scan and recognition of an image of one or more barcodes of any type
 *BarcodeScanApi* | [**BarcodeScanImageAdvancedQR**](docs/BarcodeScanApi.md#barcodescanimageadvancedqr) | **POST** /barcode/scan/image/advanced/qr | Advanced AI scan and recognition of an image of one or more QR barcodes
+*GenerateBarcodeApi* | [**GenerateBarcodeCode128**](docs/GenerateBarcodeApi.md#generatebarcodecode128) | **POST** /barcode/generate/code-128 | Generate a EAN-13 code barcode as PNG file
 *GenerateBarcodeApi* | [**GenerateBarcodeEAN13**](docs/GenerateBarcodeApi.md#generatebarcodeean13) | **POST** /barcode/generate/ean-13 | Generate a EAN-13 code barcode as PNG file
 *GenerateBarcodeApi* | [**GenerateBarcodeEAN8**](docs/GenerateBarcodeApi.md#generatebarcodeean8) | **POST** /barcode/generate/ean-8 | Generate a EAN-8 code barcode as PNG file
 *GenerateBarcodeApi* | [**GenerateBarcodeQRCode**](docs/GenerateBarcodeApi.md#generatebarcodeqrcode) | **POST** /barcode/generate/qrcode | Generate a QR code barcode as PNG file
@@ -92,6 +94,8 @@ Class | Method | HTTP request | Description
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [Model.BarcodeAdvancedResultItem](docs/BarcodeAdvancedResultItem.md)
+ - [Model.BarcodeAdvancedScanResult](docs/BarcodeAdvancedScanResult.md)
  - [Model.BarcodeLookupResponse](docs/BarcodeLookupResponse.md)
  - [Model.BarcodeQRResultItem](docs/BarcodeQRResultItem.md)
  - [Model.BarcodeScanQRAdvancedResult](docs/BarcodeScanQRAdvancedResult.md)

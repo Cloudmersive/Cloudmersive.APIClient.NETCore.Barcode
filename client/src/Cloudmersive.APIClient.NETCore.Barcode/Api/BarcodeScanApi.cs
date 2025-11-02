@@ -46,28 +46,51 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// <returns>ApiResponse of BarcodeScanResult</returns>
         ApiResponse<BarcodeScanResult> BarcodeScanImageWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
+        /// Advanced AI scan and recognition of an image of one or more barcodes of any type
+        /// </summary>
+        /// <remarks>
+        /// Scan an image or photo of a barcode and return the result with enhanced accuracy, particularlly for low quality inputs using Advanced AI.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB.  Uses large model AI.  Consumes 100 API calls per image page.  For Managed Instance and Private Cloud requires GPU infrastructure.  Supports PNG, PDF and JPEG input file formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>BarcodeAdvancedScanResult</returns>
+        BarcodeAdvancedScanResult BarcodeScanImageAdvanced (System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Advanced AI scan and recognition of an image of one or more barcodes of any type
+        /// </summary>
+        /// <remarks>
+        /// Scan an image or photo of a barcode and return the result with enhanced accuracy, particularlly for low quality inputs using Advanced AI.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB.  Uses large model AI.  Consumes 100 API calls per image page.  For Managed Instance and Private Cloud requires GPU infrastructure.  Supports PNG, PDF and JPEG input file formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of BarcodeAdvancedScanResult</returns>
+        ApiResponse<BarcodeAdvancedScanResult> BarcodeScanImageAdvancedWithHttpInfo (System.IO.Stream imageFile);
+        /// <summary>
         /// Advanced AI scan and recognition of an image of one or more QR barcodes
         /// </summary>
         /// <remarks>
-        /// Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG and JPEG input file formats.
+        /// Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG, PDF and JPEG input file formats.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="preprocessing">Optional, preprocessing mode, default is &#39;Auto&#39;.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to &#39;None&#39; if you do not want to use automatic image unrotation and enhancement. (optional)</param>
+        /// <param name="recognitionMode">Optional, recognitionMode mode, default is &#39;Advanced&#39;.  Possible values are Advanced, and Advanced2 which provides the most advanced available barcode recognition. (optional)</param>
         /// <returns>BarcodeScanQRAdvancedResult</returns>
-        BarcodeScanQRAdvancedResult BarcodeScanImageAdvancedQR (System.IO.Stream imageFile, string preprocessing = null);
+        BarcodeScanQRAdvancedResult BarcodeScanImageAdvancedQR (System.IO.Stream imageFile, string preprocessing = null, string recognitionMode = null);
 
         /// <summary>
         /// Advanced AI scan and recognition of an image of one or more QR barcodes
         /// </summary>
         /// <remarks>
-        /// Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG and JPEG input file formats.
+        /// Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG, PDF and JPEG input file formats.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="preprocessing">Optional, preprocessing mode, default is &#39;Auto&#39;.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to &#39;None&#39; if you do not want to use automatic image unrotation and enhancement. (optional)</param>
+        /// <param name="recognitionMode">Optional, recognitionMode mode, default is &#39;Advanced&#39;.  Possible values are Advanced, and Advanced2 which provides the most advanced available barcode recognition. (optional)</param>
         /// <returns>ApiResponse of BarcodeScanQRAdvancedResult</returns>
-        ApiResponse<BarcodeScanQRAdvancedResult> BarcodeScanImageAdvancedQRWithHttpInfo (System.IO.Stream imageFile, string preprocessing = null);
+        ApiResponse<BarcodeScanQRAdvancedResult> BarcodeScanImageAdvancedQRWithHttpInfo (System.IO.Stream imageFile, string preprocessing = null, string recognitionMode = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -92,28 +115,51 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         /// <returns>Task of ApiResponse (BarcodeScanResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<BarcodeScanResult>> BarcodeScanImageAsyncWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
+        /// Advanced AI scan and recognition of an image of one or more barcodes of any type
+        /// </summary>
+        /// <remarks>
+        /// Scan an image or photo of a barcode and return the result with enhanced accuracy, particularlly for low quality inputs using Advanced AI.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB.  Uses large model AI.  Consumes 100 API calls per image page.  For Managed Instance and Private Cloud requires GPU infrastructure.  Supports PNG, PDF and JPEG input file formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of BarcodeAdvancedScanResult</returns>
+        System.Threading.Tasks.Task<BarcodeAdvancedScanResult> BarcodeScanImageAdvancedAsync (System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Advanced AI scan and recognition of an image of one or more barcodes of any type
+        /// </summary>
+        /// <remarks>
+        /// Scan an image or photo of a barcode and return the result with enhanced accuracy, particularlly for low quality inputs using Advanced AI.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB.  Uses large model AI.  Consumes 100 API calls per image page.  For Managed Instance and Private Cloud requires GPU infrastructure.  Supports PNG, PDF and JPEG input file formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (BarcodeAdvancedScanResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BarcodeAdvancedScanResult>> BarcodeScanImageAdvancedAsyncWithHttpInfo (System.IO.Stream imageFile);
+        /// <summary>
         /// Advanced AI scan and recognition of an image of one or more QR barcodes
         /// </summary>
         /// <remarks>
-        /// Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG and JPEG input file formats.
+        /// Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG, PDF and JPEG input file formats.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="preprocessing">Optional, preprocessing mode, default is &#39;Auto&#39;.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to &#39;None&#39; if you do not want to use automatic image unrotation and enhancement. (optional)</param>
+        /// <param name="recognitionMode">Optional, recognitionMode mode, default is &#39;Advanced&#39;.  Possible values are Advanced, and Advanced2 which provides the most advanced available barcode recognition. (optional)</param>
         /// <returns>Task of BarcodeScanQRAdvancedResult</returns>
-        System.Threading.Tasks.Task<BarcodeScanQRAdvancedResult> BarcodeScanImageAdvancedQRAsync (System.IO.Stream imageFile, string preprocessing = null);
+        System.Threading.Tasks.Task<BarcodeScanQRAdvancedResult> BarcodeScanImageAdvancedQRAsync (System.IO.Stream imageFile, string preprocessing = null, string recognitionMode = null);
 
         /// <summary>
         /// Advanced AI scan and recognition of an image of one or more QR barcodes
         /// </summary>
         /// <remarks>
-        /// Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG and JPEG input file formats.
+        /// Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG, PDF and JPEG input file formats.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="preprocessing">Optional, preprocessing mode, default is &#39;Auto&#39;.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to &#39;None&#39; if you do not want to use automatic image unrotation and enhancement. (optional)</param>
+        /// <param name="recognitionMode">Optional, recognitionMode mode, default is &#39;Advanced&#39;.  Possible values are Advanced, and Advanced2 which provides the most advanced available barcode recognition. (optional)</param>
         /// <returns>Task of ApiResponse (BarcodeScanQRAdvancedResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BarcodeScanQRAdvancedResult>> BarcodeScanImageAdvancedQRAsyncWithHttpInfo (System.IO.Stream imageFile, string preprocessing = null);
+        System.Threading.Tasks.Task<ApiResponse<BarcodeScanQRAdvancedResult>> BarcodeScanImageAdvancedQRAsyncWithHttpInfo (System.IO.Stream imageFile, string preprocessing = null, string recognitionMode = null);
         #endregion Asynchronous Operations
     }
 
@@ -366,26 +412,179 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         }
 
         /// <summary>
-        /// Advanced AI scan and recognition of an image of one or more QR barcodes Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG and JPEG input file formats.
+        /// Advanced AI scan and recognition of an image of one or more barcodes of any type Scan an image or photo of a barcode and return the result with enhanced accuracy, particularlly for low quality inputs using Advanced AI.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB.  Uses large model AI.  Consumes 100 API calls per image page.  For Managed Instance and Private Cloud requires GPU infrastructure.  Supports PNG, PDF and JPEG input file formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <param name="preprocessing">Optional, preprocessing mode, default is &#39;Auto&#39;.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to &#39;None&#39; if you do not want to use automatic image unrotation and enhancement. (optional)</param>
-        /// <returns>BarcodeScanQRAdvancedResult</returns>
-        public BarcodeScanQRAdvancedResult BarcodeScanImageAdvancedQR (System.IO.Stream imageFile, string preprocessing = null)
+        /// <returns>BarcodeAdvancedScanResult</returns>
+        public BarcodeAdvancedScanResult BarcodeScanImageAdvanced (System.IO.Stream imageFile)
         {
-             ApiResponse<BarcodeScanQRAdvancedResult> localVarResponse = BarcodeScanImageAdvancedQRWithHttpInfo(imageFile, preprocessing);
+             ApiResponse<BarcodeAdvancedScanResult> localVarResponse = BarcodeScanImageAdvancedWithHttpInfo(imageFile);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Advanced AI scan and recognition of an image of one or more QR barcodes Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG and JPEG input file formats.
+        /// Advanced AI scan and recognition of an image of one or more barcodes of any type Scan an image or photo of a barcode and return the result with enhanced accuracy, particularlly for low quality inputs using Advanced AI.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB.  Uses large model AI.  Consumes 100 API calls per image page.  For Managed Instance and Private Cloud requires GPU infrastructure.  Supports PNG, PDF and JPEG input file formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of BarcodeAdvancedScanResult</returns>
+        public ApiResponse< BarcodeAdvancedScanResult > BarcodeScanImageAdvancedWithHttpInfo (System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling BarcodeScanApi->BarcodeScanImageAdvanced");
+
+            var localVarPath = "./barcode/scan/image/advanced";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BarcodeScanImageAdvanced", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BarcodeAdvancedScanResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (BarcodeAdvancedScanResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BarcodeAdvancedScanResult)));
+        }
+
+        /// <summary>
+        /// Advanced AI scan and recognition of an image of one or more barcodes of any type Scan an image or photo of a barcode and return the result with enhanced accuracy, particularlly for low quality inputs using Advanced AI.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB.  Uses large model AI.  Consumes 100 API calls per image page.  For Managed Instance and Private Cloud requires GPU infrastructure.  Supports PNG, PDF and JPEG input file formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of BarcodeAdvancedScanResult</returns>
+        public async System.Threading.Tasks.Task<BarcodeAdvancedScanResult> BarcodeScanImageAdvancedAsync (System.IO.Stream imageFile)
+        {
+             ApiResponse<BarcodeAdvancedScanResult> localVarResponse = await BarcodeScanImageAdvancedAsyncWithHttpInfo(imageFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Advanced AI scan and recognition of an image of one or more barcodes of any type Scan an image or photo of a barcode and return the result with enhanced accuracy, particularlly for low quality inputs using Advanced AI.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB.  Uses large model AI.  Consumes 100 API calls per image page.  For Managed Instance and Private Cloud requires GPU infrastructure.  Supports PNG, PDF and JPEG input file formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (BarcodeAdvancedScanResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BarcodeAdvancedScanResult>> BarcodeScanImageAdvancedAsyncWithHttpInfo (System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling BarcodeScanApi->BarcodeScanImageAdvanced");
+
+            var localVarPath = "./barcode/scan/image/advanced";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BarcodeScanImageAdvanced", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BarcodeAdvancedScanResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                (BarcodeAdvancedScanResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BarcodeAdvancedScanResult)));
+        }
+
+        /// <summary>
+        /// Advanced AI scan and recognition of an image of one or more QR barcodes Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG, PDF and JPEG input file formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="preprocessing">Optional, preprocessing mode, default is &#39;Auto&#39;.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to &#39;None&#39; if you do not want to use automatic image unrotation and enhancement. (optional)</param>
+        /// <param name="recognitionMode">Optional, recognitionMode mode, default is &#39;Advanced&#39;.  Possible values are Advanced, and Advanced2 which provides the most advanced available barcode recognition. (optional)</param>
+        /// <returns>BarcodeScanQRAdvancedResult</returns>
+        public BarcodeScanQRAdvancedResult BarcodeScanImageAdvancedQR (System.IO.Stream imageFile, string preprocessing = null, string recognitionMode = null)
+        {
+             ApiResponse<BarcodeScanQRAdvancedResult> localVarResponse = BarcodeScanImageAdvancedQRWithHttpInfo(imageFile, preprocessing, recognitionMode);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Advanced AI scan and recognition of an image of one or more QR barcodes Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG, PDF and JPEG input file formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="preprocessing">Optional, preprocessing mode, default is &#39;Auto&#39;.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to &#39;None&#39; if you do not want to use automatic image unrotation and enhancement. (optional)</param>
+        /// <param name="recognitionMode">Optional, recognitionMode mode, default is &#39;Advanced&#39;.  Possible values are Advanced, and Advanced2 which provides the most advanced available barcode recognition. (optional)</param>
         /// <returns>ApiResponse of BarcodeScanQRAdvancedResult</returns>
-        public ApiResponse< BarcodeScanQRAdvancedResult > BarcodeScanImageAdvancedQRWithHttpInfo (System.IO.Stream imageFile, string preprocessing = null)
+        public ApiResponse< BarcodeScanQRAdvancedResult > BarcodeScanImageAdvancedQRWithHttpInfo (System.IO.Stream imageFile, string preprocessing = null, string recognitionMode = null)
         {
             // verify the required parameter 'imageFile' is set
             if (imageFile == null)
@@ -417,6 +616,7 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (preprocessing != null) localVarHeaderParams.Add("preprocessing", this.Configuration.ApiClient.ParameterToString(preprocessing)); // header parameter
+            if (recognitionMode != null) localVarHeaderParams.Add("recognitionMode", this.Configuration.ApiClient.ParameterToString(recognitionMode)); // header parameter
             if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
 
             // authentication (Apikey) required
@@ -444,27 +644,29 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
         }
 
         /// <summary>
-        /// Advanced AI scan and recognition of an image of one or more QR barcodes Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG and JPEG input file formats.
+        /// Advanced AI scan and recognition of an image of one or more QR barcodes Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG, PDF and JPEG input file formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="preprocessing">Optional, preprocessing mode, default is &#39;Auto&#39;.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to &#39;None&#39; if you do not want to use automatic image unrotation and enhancement. (optional)</param>
+        /// <param name="recognitionMode">Optional, recognitionMode mode, default is &#39;Advanced&#39;.  Possible values are Advanced, and Advanced2 which provides the most advanced available barcode recognition. (optional)</param>
         /// <returns>Task of BarcodeScanQRAdvancedResult</returns>
-        public async System.Threading.Tasks.Task<BarcodeScanQRAdvancedResult> BarcodeScanImageAdvancedQRAsync (System.IO.Stream imageFile, string preprocessing = null)
+        public async System.Threading.Tasks.Task<BarcodeScanQRAdvancedResult> BarcodeScanImageAdvancedQRAsync (System.IO.Stream imageFile, string preprocessing = null, string recognitionMode = null)
         {
-             ApiResponse<BarcodeScanQRAdvancedResult> localVarResponse = await BarcodeScanImageAdvancedQRAsyncWithHttpInfo(imageFile, preprocessing);
+             ApiResponse<BarcodeScanQRAdvancedResult> localVarResponse = await BarcodeScanImageAdvancedQRAsyncWithHttpInfo(imageFile, preprocessing, recognitionMode);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Advanced AI scan and recognition of an image of one or more QR barcodes Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG and JPEG input file formats.
+        /// Advanced AI scan and recognition of an image of one or more QR barcodes Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG, PDF and JPEG input file formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NETCore.Barcode.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="preprocessing">Optional, preprocessing mode, default is &#39;Auto&#39;.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to &#39;None&#39; if you do not want to use automatic image unrotation and enhancement. (optional)</param>
+        /// <param name="recognitionMode">Optional, recognitionMode mode, default is &#39;Advanced&#39;.  Possible values are Advanced, and Advanced2 which provides the most advanced available barcode recognition. (optional)</param>
         /// <returns>Task of ApiResponse (BarcodeScanQRAdvancedResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BarcodeScanQRAdvancedResult>> BarcodeScanImageAdvancedQRAsyncWithHttpInfo (System.IO.Stream imageFile, string preprocessing = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BarcodeScanQRAdvancedResult>> BarcodeScanImageAdvancedQRAsyncWithHttpInfo (System.IO.Stream imageFile, string preprocessing = null, string recognitionMode = null)
         {
             // verify the required parameter 'imageFile' is set
             if (imageFile == null)
@@ -496,6 +698,7 @@ namespace Cloudmersive.APIClient.NETCore.Barcode.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (preprocessing != null) localVarHeaderParams.Add("preprocessing", this.Configuration.ApiClient.ParameterToString(preprocessing)); // header parameter
+            if (recognitionMode != null) localVarHeaderParams.Add("recognitionMode", this.Configuration.ApiClient.ParameterToString(recognitionMode)); // header parameter
             if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
 
             // authentication (Apikey) required
